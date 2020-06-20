@@ -31,13 +31,12 @@ All features are usable across modern desktop, tablet, and phone browsers.
 
 # what I did:
 
-javascript code can dedcect the sections numbers added to the page and create navigation menu contains 
-the sections names with links takes you to that section.
+my JavaScript code can deduce the section numbers added to the page and create a navigation list that contains the section names that contain links that lead you to this section.
 
-when the section enter the viewport it takes class active when it out the class removed
+When the section enters the viewport, it takes the class your-active-class when it is removed
 
-I used Intersection Observer API to give a better preformance 
+I used Intersection Observer API to give the best performance
 
-also I used appended the items to fragment to avoid many reflow and repaint
+I used also fragment to avoid many re-flow and repaint
 
 
