@@ -26,7 +26,7 @@ All features are usable across modern desktop, tablet, and phone browsers.
 2.  It's clear which section is being viewed while scrolling through the page.
 3.  When clicking an item from the navigation menu, the link scroll to the appropriate section.
 4.  code is formatted with consistent, logical, and easy-to-read formatting as 
-5.  described in the Udacity JavaScript Style Guide.
+5.  described in the [Udacity JavaScript Style Guide.](http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html) 
 
 
 # what I did:
