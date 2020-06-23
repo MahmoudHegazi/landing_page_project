@@ -1,9 +1,36 @@
+
+
 body {
     background: rgb(136,203,171);
     background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
     margin: 0;
     font-family: 'Merriweather', serif;
     color: #fff;
+}
+
+.topnav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav ul li {float: left;color:gold;padding:12px 20px;}
+
+  a {
+  text-decoration: none;
+}
+
+.topnav ul li a:hover:not(.active) {background-color: #111;}
+
+.topnav ul li a.active {background-color: #4CAF50;}
+
+.topnav ul li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  .topnav ul li.right, 
+  .topnav ul li {float: none;}
 }
 
 
@@ -51,30 +78,10 @@ section {
 
 /* ---- Module Rules ---- */
 
-/* Navigation Styles*/
-.navbar__menu ul {
-    padding-left: 0;
-    margin: 0;
-    text-align: right;
-}
 
-.navbar__menu li {
-    display: inline-block;
-}
 
-.navbar__menu .menu__link {
-    display: block;
-    padding: 1em;
-    font-weight: bold;
-    text-decoration: none;
-    color: #000;
-}
 
-.navbar__menu .menu__link:hover {
-    background: #333;
-    color: #fff;
-    transition: ease 0.3s all;
-}
+
 
 /* Header Styles */
 .page__header {
@@ -184,6 +191,7 @@ section:nth-of-type(3n + 1) .landing__container::after {
 section.your-active-class {
     background: rgb(0, 0, 0);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+    
 }
 
 section.your-active-class .landing__container::before {
@@ -213,19 +221,3 @@ section.your-active-class .landing__container::after {
 }
   
   
-ul {
-  background-color: white;
-  padding: 30px;
-  display: flex;
-  justify-content: space-around;
-  
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-a:hover {
-  color: green;
-}
