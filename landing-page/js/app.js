@@ -118,33 +118,44 @@ myBuilder();
 // Add class 'active' to section when near top of viewport
 // Set sections as active
 
+
+
+
+function remover() {
+  let l = document.querySelectorAll(".asection");
+  for (var w = 0; w < l.length; w++) {
+     l[w].classList.remove('active');
+  }
+}
+document.body.onscroll = function() {myScript()};
+function myScript () {
+let x = document.querySelectorAll(".asection");
+
+x.forEach(myFunction);
 function myFunction() {
 
-myAllSections = document.querySelectorAll('.asection');
+let hend = document.querySelectorAll(".asection");
+for (var r = 0; r < hend.length; r++) {
 var observer = new IntersectionObserver(function(entries) {
 	// isIntersecting is true when element and viewport are overlapping
 	// isIntersecting is false when element and viewport don't overlap
-    
-    
-    /*clear any active */
-    for (let i=0; i < myAllSections.length; i++) {
-      myAllSections[i].classList.remove('your-active-class');
-    } 
-    
 	if(entries[0].isIntersecting === true)
-        entries[0].target.classList.add('your-active-class');
-	
+        
+		entries[0].target.classList.add('your-active-class');
+	        /* entries[0].target.style.color = "green"; */
+	 /* فكك من ازاي تشيل الكلاس من العنصر لما تخرج شيل اي اكتف من بقيت العناصر وادي التارجت اكتف */
 }, { threshold: [0] });
 
 
-/* I used this insted of for loop to not repeat the function it self*/
-	var targets = [Array.from(document.querySelectorAll('.asection')), Array.from(document.querySelectorAll('.asection'))].flat();
+observer.observe(hend[r]);
+
+	}
+	/* to add it in all elements 
+	
+	var targets = [Array.from(document.querySelectorAll('.csss')), Array.from(document.querySelectorAll('.csss'))].flat();
     targets.forEach(target => 
         observer.observe(target));
-        
-
-
+	
+	*/
 }
-
-
-myFunction();
+}
